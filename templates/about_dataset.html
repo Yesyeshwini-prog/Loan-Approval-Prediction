@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Dataset</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a> |
+            <a href="/about-dataset">About Dataset</a> |
+            <a href="/model-performance">Model Performance</a>
+        </nav>
+    </header>
+    <div class="about-container">
+        <div class="about-head">
+            <h1>About the Dataset</h1>
+            <p>The dataset used for this loan approval prediction model contains various features that influence the loan approval process. Each feature plays an important role in determining whether a loan application is approved or rejected. Below are the key features included in the dataset:</p>
+        </div>
+        <ul>
+            <li><strong>Number of Dependents</strong>: This feature represents the number of people financially dependent on the loan applicant. More dependents could indicate a higher financial burden and may affect the loan approval decision.</li>
+            <li><strong>Education Level (Graduate/Not Graduate)</strong>: This feature indicates whether the applicant has completed higher education (Graduate) or not (Not Graduate). Education level can influence income and financial stability, which affects loan approval.</li>
+            <li><strong>Self-employed status (Yes/No)</strong>: This feature tells whether the applicant is self-employed. Self-employed individuals may have fluctuating incomes, which can impact their ability to repay a loan. This factor is crucial in the loan approval process.</li>
+            <li><strong>Annual Income</strong>: This is the total income of the applicant in a year. Higher income typically increases the likelihood of loan approval as it indicates better financial capacity to repay the loan.</li>
+            <li><strong>Loan Amount</strong>: This feature represents the amount of loan the applicant is requesting. Larger loan amounts require a stronger financial profile to get approved, often factoring in the applicant’s income, assets, and repayment capacity.</li>
+            <li><strong>Loan Term (in years)</strong>: This represents the duration over which the loan will be repaid. Shorter loan terms tend to have higher monthly repayments, while longer terms reduce monthly payments but increase the total interest paid.</li>
+            <li><strong>CIBIL Score</strong>: The CIBIL score is a numerical representation of the applicant’s creditworthiness based on their credit history. A higher score indicates a lower risk of defaulting on the loan, thus increasing the chances of approval.</li>
+            <li><strong>Value of Residential, Commercial, Luxury, and Bank Assets</strong>: These features refer to the value of different types of assets owned by the applicant, such as residential property, commercial property, luxury items, and bank assets. Higher asset values can serve as collateral and provide security to lenders, improving the chances of loan approval.</li>
+        </ul>
+    </div>
+</body>
+</html>

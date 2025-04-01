@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Approval Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a> |
+            <a href="/about-dataset">About Dataset</a> |
+            <a href="/model-performance">Model Performance</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="info">
+            <h1>Unlock Your Financial Future</h1>
+            <p>Get instant insights into your loan approval chances with our advanced prediction model. Whether you're applying for a home, car, or personal loan, know your approval status in seconds!</p>
+        </div>
+        <div class="form-con">
+            <div>
+                <form action="/predict" method="POST">
+                    <div class="form-group">
+                        <label for="no_of_dependents">Number of Dependents</label>
+                        <input type="number" name="no_of_dependents" id="no_of_dependents" required min="0" max="10">
+                    </div>
+                    <div class="form-group">
+                        <label for="education">Education</label>
+                        <select name="education" id="education" required>
+                            <option value="Graduate">Graduate</option>
+                            <option value="Not Graduate">Not Graduate</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="self_employed">Self Employed</label>
+                        <select name="self_employed" id="self_employed" required>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="income_annum">Annual Income (₹)</label>
+                        <input type="number" name="income_annum" id="income_annum" required min="10000" max="10000000">
+                    </div>
+                    <div class="form-group">
+                        <label for="loan_amount">Loan Amount (₹)</label>
+                        <input type="number" name="loan_amount" id="loan_amount" required min="5000">
+                    </div>
+                    <div class="form-group">
+                        <label for="loan_term">Loan Term (Years)</label>
+                        <input type="number" name="loan_term" id="loan_term" required min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="cibil_score">CIBIL Score</label>
+                        <input type="number" name="cibil_score" id="cibil_score" required min="300" max="900">
+                    </div>
+                    <div class="form-group">
+                        <label for="residential_assets_value">Residential Assets Value (₹)</label>
+                        <input type="number" name="residential_assets_value" id="residential_assets_value" required min="0" max="100000000">
+                    </div>
+                    <div class="form-group">
+                        <label for="commercial_assets_value">Commercial Assets Value (₹)</label>
+                        <input type="number" name="commercial_assets_value" id="commercial_assets_value" required min="0" max="100000000">
+                    </div>
+                    <div class="form-group">
+                        <label for="luxury_assets_value">Luxury Assets Value (₹)</label>
+                        <input type="number" name="luxury_assets_value" id="luxury_assets_value" required min="0" max="100000000">
+                    </div>
+                    <div class="form-group">
+                        <label for="bank_asset_value">Bank Assets Value (₹)</label>
+                        <input type="number" name="bank_asset_value" id="bank_asset_value" required min="0" max="100000000">
+                    </div>
+        
+                    <!-- Button to submit the form -->
+                    <div class="but-box">
+                        <button type="submit">Check Loan Approval</button>
+                    </div>
+                </form>
+            </div>
+        
+            <div>
+                {% if prediction_text %}
+                <div class="result {{ 'accepted' if prediction_text == 'Approved' else 'rejected' }}">
+                {{ prediction_text }}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        
+        
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    background-color: #f4f4f9;
+}
+
+nav {
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+    border-radius: 10px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    align-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+    position: relative; /* Ensure it positions correctly with the backdrop filter */
+}
+
+
+nav a {
+    font-style: normal;
+    text-decoration: none;
+    font-size: 16px;
+    color: darkgray;
+    font-weight: 200;
+    margin: 0px 15px;
+    border: none;
+    transition: color 0.5s ease; 
+}
+
+nav a:hover {
+    color: black; 
+    scale: 1.1;
+    transition: all 0.5s ease-in;
+}
+.container{
+    display: flex;
+}
+.info{
+    padding: 20px;
+    width: 40%;
+}
+.info h1{
+    margin-top: 5px;
+    font-size: 48px;
+    color: darkred;
+}
+.info p{
+    color: gray;
+}
+.form-con {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    
+}
+form{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.form-group label{
+    font-size: 16px;
+    color: gray;
+}
+.form-group input{
+    width: 200px;
+    border-radius: 0px;
+    border: 1px solid gray;
+    outline: none;
+}
+.form-group input:focus {
+    border-color: black; /* Maintain the gray border on focus */
+}
+
+/* Style for select elements (Education and Self-Employment dropdowns) */
+.form-group select {
+    width: 200px;
+    padding: 10px;
+    border-radius: 0px;
+    border: 1px solid gray;
+    outline: none; /* Remove focus outline */
+}
+
+/* Remove the border color change on focus for select elements */
+.form-group select:focus {
+    border-color: black; /* Maintain the gray border on focus */
+}
+.but-box{
+    position: absolute;
+    bottom: 10%;
+    margin-left: 10px;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    height: 40px;
+    padding: 10px;
+    background-color: lightgray;
+    color: black;
+    border: none;
+    font-size: 16px;
+}
+
+button:hover {
+    color: lightgray;
+    background-color: black;
+    transition: all 0.5s ease-in-out;
+}
+
+.result {
+    text-align: center;
+    font-size: 18px;
+    width: 150px;
+    position: absolute;
+    bottom: 10%;
+    right: 30%;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+.accepted {
+    background-color: darkgreen;
+    color: white;
+}
+
+.rejected {
+    background-color: red;
+    color: white;
+}
+
+.about-container{
+    padding: 20px;
+}
+.about-head h1{
+    margin-top: 5px;
+    font-size: 48px;
+    color: darkred;
+}
+.about-head p{
+    color: gray;
+    margin-bottom: 10px;
+}
+.about-container ul li strong{
+    color: darkred;
+}
+
+
+.model-container{
+    padding: 20px;
+}
+.model-info h1{
+    margin-top: 5px;
+    font-size: 48px;
+    color: darkred;
+}
+.model-info p{
+    color: gray;
+    margin-bottom: 10px;
+}
+.model-container ul li strong{
+    color: darkred;
+}
+.model-container h2{
+    margin: 10px 0px;
+}
+
+.plot-box{
+    display: flex;
+    flex-wrap: wrap;
+}
+.plot-box div{
+    margin-right: 50px;
+}
+.plot-box div h3{
+    margin: 5px 0px;
+    color: darkred;
+}

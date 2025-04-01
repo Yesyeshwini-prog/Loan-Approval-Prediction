@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Performance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a> |
+            <a href="/about-dataset">About Dataset</a> |
+            <a href="/model-performance">Model Performance</a>
+        </nav>
+    </header>
+    <div class="model-container">
+        <div class="model-info">
+            <h1>Model Performance</h1>
+            <p>The loan approval prediction model was evaluated using multiple metrics to assess its effectiveness in predicting whether a loan will be approved or rejected. Below are the key metrics:</p>
+        </div>
+        <h2>Model Evaluation Metrics</h2>
+        <ul>
+            <li><strong>Accuracy:</strong> 98.01% - This indicates that the model correctly predicted 98.01% of the test instances.</li>
+            <li><strong>Precision:</strong> 0.98 (for class 0) and 0.98 (for class 1) - Precision measures the proportion of positive predictions that are actually correct. Both classes (approved and rejected) have high precision, meaning the model is good at predicting the correct class.</li>
+            <li><strong>Recall:</strong> 0.97 (for class 0) and 0.99 (for class 1) - Recall shows the model's ability to correctly identify all the positive instances. Class 1 (loan approval) has very high recall, meaning most of the approved loans are correctly predicted.</li>
+            <li><strong>F1-Score:</strong> 0.97 (for class 0) and 0.98 (for class 1) - The F1-score combines both precision and recall into a single metric, where class 1 (approved loans) has a slightly better score than class 0.</li>
+        </ul>
+        
+        <h2>Classification Report</h2>
+        <pre>
+               precision    recall  f1-score   support
+
+           0       0.98      0.97      0.97       318
+           1       0.98      0.99      0.98       536
+
+    accuracy                           0.98       854
+   macro avg       0.98      0.98      0.98       854
+weighted avg       0.98      0.98      0.98       854
+        </pre>
+        
+        <div class="model-info">
+            <h2>Model Plots</h2>
+            <p>Below are some important visualizations that help us understand the performance of the model:</p>
+        </div>
+        
+        <div class="plot-box">
+            <div>
+                <h3>Confusion Matrix</h3>
+        <div id="confusion-matrix">
+            <img src="{{ url_for('static', filename='confusion.png') }}" alt="Confusion Matrix" width="300" height="300">
+        </div>
+            </div>
+
+        <div>
+            <h3>ROC Curve</h3>
+        <div id="roc-curve">
+            <img src="{{ url_for('static', filename='ROC.png') }}" alt="ROC Curve" width="300" height="300">
+        </div>
+        </div>
+
+        <div>
+            <h3>Precision-Recall Curve</h3>
+        <div id="precision-recall">
+            <img src="{{ url_for('static', filename='PR.png') }}" alt="Precision-Recall Curve" width="300" height="300">
+        </div>
+        </div>
+        </div>
+
+        <p style="margin: 25px 0px; color: gray; width: 75%;">These visualizations help in better understanding the model's ability to distinguish between loan approvals and rejections. The confusion matrix shows the true positives, true negatives, false positives, and false negatives, while the ROC curve and Precision-Recall curve provide insight into the trade-offs between recall and precision.</p>
+    </div>
+</body>
+</html>
