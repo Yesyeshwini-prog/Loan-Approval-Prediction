@@ -30,7 +30,7 @@ applicants and financial institutions, improving operational efficiency and cust
 # **MODEL PERFORMANCE**
 ![image](https://github.com/user-attachments/assets/4dde3ada-46a5-4d97-99f9-ae02794b0945)
 
-![image](https://github.com/user-attachments/assets/6224fd6d-c2e1-4209-9ed7-b4cc1a3325d6)
+![image](https://github.com/user-attachments/assets/a3b94a33-c538-4b32-9117-4347a47f0ced)
 
 ![image](https://github.com/user-attachments/assets/69055a0b-8285-4c87-8026-e9e10fa46d70)
 
