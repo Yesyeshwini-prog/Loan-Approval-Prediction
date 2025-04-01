@@ -11,7 +11,7 @@ decision-making to recognize qualified applicants from a population set. The out
 would reduce the time taken for loan approvals and would be useful for both banks and loan applicants. 
 
 
-**INTRODUCTION**
+# **INTRODUCTION**
 
 The objective of this project is to develop a machine learning model that can accurately predict the 
 eligibility of loan applicants based on their previous loan data and various other factors. The model 
@@ -21,13 +21,13 @@ streamline the loan approval process, reducing the time and effort required for 
 while maintaining high prediction accuracy. This solution can support faster decision-making for both 
 applicants and financial institutions, improving operational efficiency and customer experience. 
 
-**SCREENSHOTS**
+# **SCREENSHOTS**
 ![image](https://github.com/user-attachments/assets/38232ff6-1535-48ce-a2e6-0e199fffbb91)
 
-**ABOUT THE DATASET**
+# **ABOUT THE DATASET**
 ![image](https://github.com/user-attachments/assets/3c0c48d3-eb58-4edf-835b-0d5fec0af3a0)
 
-**MODEL PERFORMANCE**
+# **MODEL PERFORMANCE**
 ![image](https://github.com/user-attachments/assets/4dde3ada-46a5-4d97-99f9-ae02794b0945)
 
 ![image](https://github.com/user-attachments/assets/6224fd6d-c2e1-4209-9ed7-b4cc1a3325d6)
