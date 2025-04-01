@@ -1,4 +1,4 @@
-# Loan-Approval-Prediction
+# **Loan-Approval-Prediction**
 
 With rapid improvements in technology for today’s globalized world, the financial needs from people 
 have shown a consequently vast rise in loan application requests in the banking sector. There are some 
